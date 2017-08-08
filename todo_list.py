@@ -30,6 +30,7 @@ class ToDoList:
             is_done = row[1]
             todo_item = ToDoItem(text)
             todo_item.is_done = is_done
+            cls.add_item(todo_item)
 
     @classmethod
     def get_data_from_file(cls, csv_path):
