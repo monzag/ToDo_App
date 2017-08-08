@@ -21,4 +21,8 @@ class ToDoList:
         if item in cls.list_of_items:
             cls.list_of_items.remove(item)
 
+    @classmethod
+    def create_from_csv(cls, file_path):
+        pass
+
 
