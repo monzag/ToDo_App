@@ -25,3 +25,7 @@ def print_exit_message():
 
 def print_exit_option():
     print('0. Exit')
+
+
+def get_new_item():
+    return input('Write new item: ')
