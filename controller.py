@@ -40,12 +40,14 @@ def add_new_item():
         ToDoList.add_item(todo_item)
 
 
+def mark_item():
+    show_all_items()
+    user_choice = view.get_user_input()
+    if user_choice in range(len(ToDoList.list_of_items)):
+        ToDoList.list_of_items[user_choice - 1].mark()
+
+
 def archive():
     for item in ToDoList.list_of_items:
         if item.is_done is True:
             ToDoList.list_of_items.remove(item)
-
-
-
-
-
