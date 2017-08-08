@@ -1,6 +1,7 @@
 def print_main_menu():
     options = ['Show all items', 'Add new item', 'Mark item', 'Archive']
     get_list(options)
+    print_exit_option()
 
 
 def get_list(options):
@@ -24,3 +25,7 @@ def print_exit_message():
 
 def print_exit_option():
     print('0. Exit')
+
+
+def display_all_objects():
+    pass
