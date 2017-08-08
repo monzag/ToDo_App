@@ -40,5 +40,12 @@ def add_new_item():
         ToDoList.add_item(todo_item)
 
 
+def archive():
+    for item in ToDoList.list_of_items:
+        if item.is_done is True:
+            ToDoList.list_of_items.remove(item)
+
+
+
 
 
