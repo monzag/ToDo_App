@@ -36,3 +36,16 @@ class ToDoList:
             splitted_rows = [line.strip().split(',') for line in csvfile]
 
         return splitted_rows
+
+    @classmethod
+    def get_data_to_save(cls):
+        data_to_save = []
+
+        for item in cls.list_of_items:
+            name = item.name
+            is_done = item.is_done
+            row = [name, is_done]
+            data_to_save.append(row)
+
+        return data_to_save
+
