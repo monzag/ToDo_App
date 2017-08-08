@@ -3,7 +3,7 @@ import view
 
 
 def main_menu():
-    ToDoList.create_from_csv()
+    ToDoList.create_from_csv('todo_items.csv')
 
     user_choice = ''
     while user_choice != 0:
@@ -11,8 +11,7 @@ def main_menu():
         user_choice = view.get_user_input()
 
         if user_choice == 1:
-            # show all items
-            pass
+            show_all_items()
 
         elif user_choice == 2:
             # add new item
@@ -27,5 +26,11 @@ def main_menu():
             pass
 
     view.print_exit_message()
+
+
+def show_all_items():
+    view.get_list(ToDoList.list_of_items)
+
+
 
 
