@@ -1,4 +1,5 @@
 from todo_item import ToDoItem
+import csv
 
 
 class ToDoList:
@@ -36,6 +37,17 @@ class ToDoList:
             splitted_rows = [line.strip().split(',') for line in csvfile]
 
         return splitted_rows
+
+    @classmethod
+    def save_data_to_file(cls):
+        list_to_save = cls.get_data_to_save()
+        file_path = cls.__class__.__name__ + '.csv'
+
+        with open(file_path, 'w') as csvfile:
+            writer = csv.writer(csvfile, delimiter=',')
+
+            for line in list_to_save:
+                writer.writerow(line)
 
     @classmethod
     def get_data_to_save(cls):
