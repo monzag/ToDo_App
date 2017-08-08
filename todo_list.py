@@ -16,4 +16,9 @@ class ToDoList:
     def mark_item(cls, item):
         return item.mark
 
-        
+    @classmethod
+    def archive(cls, item):
+        if item in cls.list_of_items:
+            cls.list_of_items.remove(item)
+
+
