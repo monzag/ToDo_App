@@ -27,9 +27,12 @@ class ToDoList:
         splitted_data = cls.get_data_from_file(csv_path)
         for row in splitted_data:
             text = row[0]
-            is_done = row[1]
-            todo_item = ToDoItem(text)
-            todo_item.is_done = is_done
+
+            if len(row[1]) > 0:
+                todo_item = ToDoItem(text, True)
+            else:
+                todo_item = ToDoItem(text)
+
             cls.add_item(todo_item)
 
     @classmethod
