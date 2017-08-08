@@ -31,6 +31,7 @@ class ToDoList:
     @classmethod
     def get_data_from_file(cls, csv_path):
         with open(csv_path, 'r') as csvfile:
-            splitted_rows = [line.strip().split(',') for line in csvfile]
+            splitted_rows = [line.strip() for line in csvfile]
 
         return splitted_rows
+
