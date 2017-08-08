@@ -20,3 +20,7 @@ def get_user_input():
 
 def print_exit_message():
     print('Good bye!:)')
+
+
+def print_exit_option():
+    print('0. Exit')
