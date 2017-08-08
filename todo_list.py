@@ -22,8 +22,11 @@ class ToDoList:
             cls.list_of_items.remove(item)
 
     @classmethod
-    def create_from_csv(cls, file_path):
-        pass
+    def create_from_csv(cls, scv_path):
+        splitted_data = cls.get_data_from_file(scv_path)
+        for text in splitted_data:
+            todo_item = ToDoItem(text)
+            cls.add_item(todo_item)
 
     @classmethod
     def get_data_from_file(cls, csv_path):
