@@ -16,3 +16,7 @@ def get_user_input():
         return int(number)
     else:
         print('Must be integer!')
+
+
+def print_exit_message():
+    print('Good bye!:)')
