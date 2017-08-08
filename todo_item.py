@@ -9,6 +9,13 @@ class ToDoItem:
 
     def __eq__(self, other):
         return self.__dict__ == other.__dict__
-    
-    
+
+    def __str__(self):
+        if self.is_done:
+            return '[X] {}'.format(self.name)
+
+        else:
+            return '[] {}'.format(self.name)
+
+
 
