@@ -15,16 +15,13 @@ def main_menu():
             show_all_items()
 
         elif user_choice == 2:
-            # add new item
-            pass
+            add_new_item()
 
         elif user_choice == 3:
-            # mark item
-            pass
+            mark_item()
 
         elif user_choice == 4:
-            # archive
-            pass
+            archive()
 
     view.print_exit_message()
 
