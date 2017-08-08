@@ -25,7 +25,3 @@ def print_exit_message():
 
 def print_exit_option():
     print('0. Exit')
-
-
-def display_all_objects():
-    pass
