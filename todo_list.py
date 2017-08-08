@@ -9,7 +9,6 @@ class ToDoList:
     @classmethod
     def add_item(cls, item):
         cls.list_of_items.append(item)
-        cls.save_data_to_file()
 
     @classmethod
     def mark_item(cls, item):
@@ -27,7 +26,7 @@ class ToDoList:
         for row in splitted_data:
             text = row[0]
 
-            if len(row[1]) > 0:
+            if len(row) > 1:
                 todo_item = ToDoItem(text, True)
             else:
                 todo_item = ToDoItem(text)
@@ -42,11 +41,10 @@ class ToDoList:
         return splitted_rows
 
     @classmethod
-    def save_data_to_file(cls):
+    def save_data_to_file(cls, file_name):
         list_to_save = cls.get_data_to_save()
-        file_path = cls.__class__.__name__ + '.csv'
 
-        with open(file_path, 'w') as csvfile:
+        with open(file_name, 'w') as csvfile:
             writer = csv.writer(csvfile, delimiter=',')
 
             for line in list_to_save:
@@ -58,8 +56,11 @@ class ToDoList:
 
         for item in cls.list_of_items:
             name = item.name
-            is_done = item.is_done
-            row = [name, is_done]
+            if item.is_done is True:
+                row = [name, 'done']
+            else:
+                row = [name]
+
             data_to_save.append(row)
 
         return data_to_save
