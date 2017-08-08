@@ -1,4 +1,5 @@
 from todo_list import ToDoList
+from todo_item import ToDoItem
 import view
 
 
@@ -30,6 +31,13 @@ def main_menu():
 
 def show_all_items():
     view.get_list(ToDoList.list_of_items)
+
+
+def add_new_item():
+    name = view.get_new_item()
+    todo_item = ToDoItem(name)
+    if todo_item not in ToDoList.list_of_items:
+        ToDoList.add_item(todo_item)
 
 
 
