@@ -23,6 +23,8 @@ def main_menu():
         elif user_choice == 4:
             archive()
 
+        ToDoList.save_data_to_file('todo_items.csv')
+
     view.print_exit_message()
 
 
@@ -46,5 +48,5 @@ def mark_item():
 
 def archive():
     for item in ToDoList.list_of_items:
-        if item.is_done is True:
-            ToDoList.list_of_items.remove(item)
+        ToDoList.archive(item)
+    
