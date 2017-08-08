@@ -6,21 +6,22 @@ def print_main_menu():
 
 def get_list(options):
     number = 1
+    print('')
     for option in options:
         print('{}. {}'.format(number, option))
         number += 1
 
 
 def get_user_input():
-    number = input('Choose option: ')
+    number = input('\nChoose option: ')
     if number.isdigit():
         return int(number)
     else:
-        print('Must be integer!')
+        print('\nMust be integer!\n')
 
 
 def print_exit_message():
-    print('Good bye!:)')
+    print('\nGood bye!:)')
 
 
 def print_exit_option():
@@ -28,4 +29,4 @@ def print_exit_option():
 
 
 def get_new_item():
-    return input('Write new item: ')
+    return input('\nWrite new item: ')
