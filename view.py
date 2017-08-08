@@ -1,5 +1,5 @@
 def print_main_menu():
-    options = []
+    options = ['Show all items', 'Add new item', 'Mark item', 'Archive']
     get_list(options)
 
 
