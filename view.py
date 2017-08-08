@@ -8,3 +8,11 @@ def get_list(options):
     for option in options:
         print('{}. {}'.format(number, option))
         number += 1
+
+
+def get_user_input():
+    number = input('Choose option: ')
+    if number.isdigit():
+        return int(number)
+    else:
+        print('Must be integer!')
