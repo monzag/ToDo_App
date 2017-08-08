@@ -24,9 +24,11 @@ class ToDoList:
     @classmethod
     def create_from_csv(cls, csv_path):
         splitted_data = cls.get_data_from_file(csv_path)
-        for text in splitted_data:
+        for row in splitted_data:
+            text = row[0]
+            is_done = row[1]
             todo_item = ToDoItem(text)
-            cls.add_item(todo_item)
+            todo_item.is_done = is_done
 
     @classmethod
     def get_data_from_file(cls, csv_path):
