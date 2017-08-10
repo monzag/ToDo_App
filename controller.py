@@ -43,7 +43,7 @@ def mark_item():
     show_all_items()
     user_choice = view.get_user_input()
     if user_choice in range(len(ToDoList.list_of_items)):
-        ToDoList.list_of_items[user_choice - 1].mark()
+        ToDoList.mark_item([user_choice - 1])
 
 
 def archive():

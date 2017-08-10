@@ -12,6 +12,7 @@ class ToDoItem:
 
     def __str__(self):
         if self.is_done is True:
+            # Zwrócić raz string
             return '[X] {}'.format(self.name)
 
         else:

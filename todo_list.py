@@ -4,6 +4,7 @@ import csv
 
 class ToDoList:
 
+    # utworzyć init, atrybut instancji
     list_of_items = []
 
     @classmethod
@@ -11,8 +12,8 @@ class ToDoList:
         cls.list_of_items.append(item)
 
     @classmethod
-    def mark_item(cls, item):
-        return item.mark
+    def mark_item(cls, index):
+        cls.list_of_items[index].mark()
 
     @classmethod
     def archive(cls, item):
