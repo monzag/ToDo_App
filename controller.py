@@ -39,7 +39,7 @@ def add_new_item(todo_list):
 
 
 def mark_item(todo_list):
-    show_all_items()
+    show_all_items(todo_list)
     user_choice = view.get_user_input()
     if user_choice in range(len(todo_list.list_of_items) + 1):
         todo_list.mark_item(user_choice - 1)
