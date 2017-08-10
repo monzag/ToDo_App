@@ -13,11 +13,15 @@ def get_list(options):
 
 
 def get_user_input():
-    number = input('\nChoose option: ')
-    if number.isdigit():
-        return int(number)
-    else:
+    try:
+        number = int(input('\nChoose option: '))
+
+    except TypeError:
         print('\nMust be integer!\n')
+        number = None
+
+    finally:
+        return number
 
 
 def print_exit_message():
