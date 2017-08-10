@@ -11,12 +11,13 @@ class ToDoItem:
         return self.__dict__ == other.__dict__
 
     def __str__(self):
+        text = ' {}'.format(self.name)
         if self.is_done is True:
-            # Zwrócić raz string
-            return '[X] {}'.format(self.name)
-
+            message = '[X]' + text
         else:
-            return '[ ] {}'.format(self.name)
+            message = '[ ]' + text
+
+        return message
 
 
 
